@@ -1,0 +1,197 @@
+//ÜLESANNE 1
+
+//* Koosta funktsioon kolme arvu keskmise arvutamiseks nõnda, 
+//et esimesest ja viimasest võetakse pool, keskmisest kõik ning jagatakse tulemus kahega.
+//Katseta.
+
+// ARV: 469  ARVUTUSKÄIK: ((4/2)+8+(8/2))/2 -> (2+8+4)/2
+import java.net.*;
+import java.io.*;
+
+public class Yl1{
+	public static void main(String[] arg) throws Exception{ //throws Exception annab teada, kui võrk maas või mingi muu ootamatus
+		String aadress="http://www.tlu.ee/~k2di/pohikursus/esimene_teine_kolmas.txt"; //aadress, kust võtad enda andmed
+		BufferedReader br=new BufferedReader(new InputStreamReader(new URL(aadress).openStream())); //veebist lugemiseks
+		String rida=br.readLine(); //1. on pealkirja rida
+		if(!rida.startsWith("eristus")){
+			System.out.println("sobiva pealkirjata fail");
+			return;
+		}
+		rida=br.readLine();
+		System.out.println("Andmed failis:");
+		int esimene=0;
+		int teine=0;
+		int kolmas=0;
+		while(rida!=null){
+			System.out.println(rida);
+			String[] m=rida.split(",");
+			if(m[0].equals("esimene")){
+				esimene+=Integer.parseInt(m[1]);
+			}
+			rida=br.readLine();
+			if(m[0].equals("teine")){ 
+				teine+=Integer.parseInt(m[1]); 
+			} 
+			//rida=br.readLine();
+			if(m[0].equals("kolmas")){ 
+				kolmas+=Integer.parseInt(m[1]); 
+			}
+		}
+		System.out.println("Võttes esimesest ja viimasest arvust pool, keskmisest kõik, siis jagades nende summa 2-ga on vastus: "+((esimene/2)+teine+(kolmas/2))/2);
+		
+	}
+}
+
+//VÄLJATRÜKK
+
+//Andmed failis:
+//esimene,8
+//teine,8
+//kolmas,2
+//Võttes esimesest ja viimasest arvust pool, keskmisest kõik, siis jagades nende summa 2-ga on vastus: 6
+
+//***********************************************************************************************************************************
+//ÜLESANNE 2
+//* Funktsioonile antakse kogumina ette arvud. Kronoloogilise keskmise arvutamiseks
+//võetakse esimesest ja viimasest arvust pool, liidetakse muud arvud ning summa
+//jagatakse andmestiku pikkusest ühe võrra väiksema arvuga.
+
+
+import java.net.*; 
+import java.io.*;
+public class Yl2{
+	public static void main(String[] arg) throws Exception{ //throws Exception annab teada, kui võrk maas või mingi muu ootamatus
+		String aadress="http://www.tlu.ee/~k2di/pohikursus/Numbrid.txt"; //aadress, kust võtad enda andmed
+		BufferedReader br=new BufferedReader(new InputStreamReader(new URL(aadress).openStream())); //veebist lugemiseks
+		String rida=br.readLine(); //1. on pealkirja rida
+		if(!rida.startsWith("eristus")){
+			System.out.println("sobiva pealkirjata fail");
+			return;
+		}
+		rida=br.readLine();
+		System.out.println("Andmed failis:");
+		int keskmistesumma=0;
+		int jagatavatesumma=0;
+		while(rida!=null){
+			System.out.println(rida);
+			String[] m=rida.split(",");
+			if(m[0].equals("aarmine")){
+				jagatavatesumma+=Integer.parseInt(m[1]);
+			}
+			rida=br.readLine();
+			if(m[0].equals("keskmine")){ 
+				keskmistesumma+=Integer.parseInt(m[1]); 
+			} 
+		}
+		System.out.println("Keskmiste arvude summa: "+keskmistesumma+".");
+		System.out.println("Esimese ja viimase arvu summa jagatud pooleks: "+jagatavatesumma/2+".");
+		System.out.println("Arvude kronoloogiline keskmine: "+(keskmistesumma+(jagatavatesumma/2))/6+".");
+	}
+}
+
+//VÄLJATRÜKK
+
+//Andmed failis:
+//aarmine,200
+//keskmine,12
+//keskmine,35
+//keskmine,644
+//keskmine,5
+//keskmine,32
+//aarmine,600
+//Keskmiste arvude summa: 728.
+//Esimese ja viimase arvu summa jagatud pooleks: 400.
+//Arvude kronoloogiline keskmine: 188.
+
+//****************************************************************************************************************************
+// ÜLESANNE 3
+
+//*Sisendfailis on kirjas igal real kuupäev ning mõõdetud temperatuur kell 0, 6, 12, 18
+//ja 24. Väljundfaili kirjuta kuupäev ning keskmine temperatuur nõnda arvutatuna, et kumbagi 
+//südaöist temperatuuri arvestatakse poole ulatuses, muid tervikuna.
+
+import java.util.Arrays;
+
+public class Yl3{
+	public static void main (String[] arg){
+		Arvud[] arv=new Arvud[5];
+		arv[0]=new Arvud("1206170912152017");
+		arv[1]=new Arvud("1306170810131514");
+		arv[2]=new Arvud("1406171114182015");
+		arv[3]=new Arvud("1506171013171914");
+		arv[4]=new Arvud("1606170709121511");
+		
+		
+		
+		Arrays.stream(arv).forEach(System.out::println);
+		
+	}
+	
+}	
+
+//VÄLJATRÜKK
+
+//12. juuni 2017 kell 00.00 9kraadi| 6.00 12kraadi| 12.00 15kraadi| 18.00 20kraadi| 24.00 17kraadi. Päeva keskmine keskmine temperatuur 14.
+//13. juuni 2017 kell 00.00 8kraadi| 6.00 10kraadi| 12.00 13kraadi| 18.00 15kraadi| 24.00 14kraadi. Päeva keskmine keskmine temperatuur 12.
+//14. juuni 2017 kell 00.00 11kraadi| 6.00 14kraadi| 12.00 18kraadi| 18.00 20kraadi| 24.00 15kraadi. Päeva keskmine keskmine temperatuur 16.
+//15. juuni 2017 kell 00.00 10kraadi| 6.00 13kraadi| 12.00 17kraadi| 18.00 19kraadi| 24.00 14kraadi. Päeva keskmine keskmine temperatuur 15.
+//16. juuni 2017 kell 00.00 7kraadi| 6.00 9kraadi| 12.00 12kraadi| 18.00 15kraadi| 24.00 11kraadi. Päeva keskmine keskmine temperatuur 11.
+
+//*************************************************************************************************************************************
+//ÜLESANDE 4 ABIFAIL
+
+public class Arvud{
+	protected String andmed;
+	public Arvud(String uusKood){
+	andmed=uusKood;}
+	
+	public int kuupaev(){
+		return Integer.parseInt(andmed.substring(0, 2));
+	}
+	
+	public int kuunr(){
+		return Integer.parseInt(andmed.substring(2, 4));
+	}
+	
+	public int aasta(){
+		return Integer.parseInt(andmed.substring(4, 6));
+	}
+	
+	public int nulltemp(){
+		return Integer.parseInt(andmed.substring(6, 8));
+	}
+	
+	public int kuustemp(){
+		return Integer.parseInt(andmed.substring(8, 10));
+	}
+	
+	public int kaksteisttemp(){
+		return Integer.parseInt(andmed.substring(10, 12));
+	}
+	
+	public int kaheksateisttemp(){
+		return Integer.parseInt(andmed.substring(12, 14));
+	}
+	
+	public int kakskendnelitemp(){
+		return Integer.parseInt(andmed.substring(14, 16));
+	}
+	
+	public String kuunimi(){
+		String[] kuunimed={"","jaanuar","veebruar","märts","aprill","mai","juuni","juuli","august","september","oktoober","november","detsember"};
+		return kuunimed[kuunr()];
+	}
+	
+	public int aastaarv4kohta(){
+		return (20+(Integer.parseInt(andmed.substring(0,1))-1)/2)*100+Integer.parseInt(andmed.substring(4,6));
+	}
+	
+	public int tempkeskmine(){
+		return (nulltemp()/2+kuustemp()+kaksteisttemp()+kaheksateisttemp()+kakskendnelitemp()/2)/4;
+	}
+	
+	@Override
+	public String toString(){
+		return kuupaev()+". "+kuunimi()+" "+aastaarv4kohta()+" kell 00.00 "+nulltemp()+"kraadi| 6.00 "+kuustemp()+"kraadi| 12.00 "+kaksteisttemp()+"kraadi| 18.00 "+kaheksateisttemp()+"kraadi| 24.00 "+kakskendnelitemp()+"kraadi"+". Päeva keskmine keskmine temperatuur "+tempkeskmine()+".";
+	}
+}
