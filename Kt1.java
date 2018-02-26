@@ -69,12 +69,12 @@ public class Kt1{
                 uusPalk = koefid.get(k) * uusPalk;
                 pw.println(koefid.get(k) + " " + uusPalk);
             }
-            double koefidKokku = 0;
+            double koefidKokku = 1;
             double keskmineKoef = 0;
             for (int j = 0; j < koefid.size(); j++){
-                koefidKokku = koefidKokku + koefid.get(j);
+                koefidKokku = koefidKokku * koefid.get(j);
             }
-            keskmineKoef = koefidKokku / koefid.size();
+            keskmineKoef = Math.pow(koefidKokku, 1.0 / koefid.size());
             uusPalk = algPalk;
             pw.println("\nKeskmine koefitsient on: " + keskmineKoef);
             for(int p = 0; p < koefid.size(); p++){
