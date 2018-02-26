@@ -1,0 +1,11 @@
+kursus,hinne,punktid
+kursus1,A,5
+kursus2,D,2
+kursus3,C,6
+kursus4,A,4
+kursus5,F,4
+kursus6,D,4
+kursus7,D,4
+kursus8,A,3
+kursus9,F,6
+kursus10,C,5
