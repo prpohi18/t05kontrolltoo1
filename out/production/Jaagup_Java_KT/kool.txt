@@ -1,0 +1,5 @@
+C keel, A, 5
+Java, B, 7
+Andmebaasid, A, 3
+Õppimine kõrgkoolis, F, 5
+Javascript, A, 5
