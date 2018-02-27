@@ -1,0 +1,6 @@
+Auto 1 kaugus: 10.241666666666665km, 3 sekundi pärast
+Auto 1 kaugus: 14.366666666666665km, 300 sekundi pärast
+Auto 1 kaugus: 110.2km, 7200 sekundi pärast
+Auto 2 kaugus: 5.4750000000000005km, 3 sekundi pärast
+Auto 2 kaugus: 12.9km, 300 sekundi pärast
+Auto 2 kaugus: 185.4km, 7200 sekundi pärast
