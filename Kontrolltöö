@@ -1,0 +1,95 @@
+import java.io.*;
+import java.lang.System;
+
+
+public class ules1{
+
+  public static void main(String[] args)throws Exception{
+
+   BufferedReader br = new BufferedReader(new FileReader("tekst.txt"));
+    String rida = br.readLine();
+    int esimene = 0;
+    double teine = 0f;
+    double kolmas = 0f;
+    double neljas = 0f;
+    double viies = 0f;
+    double summa = 0f;
+    double arv = 0;
+    double u_teine = 0;
+    double u_kolmas = 0;
+    double u_neljas = 0;
+    double u_viies = 0;
+    try{
+      while(rida!=null){
+
+          String[]m = rida.split(",");
+          if(m[0].equals("esimene")){
+            esimene += Integer.parseInt(m[1]);
+          }
+          rida = br.readLine();
+          if(m[0].equals("teine")){
+            teine += Float.parseFloat(m[1]);
+          }
+          if(m[0].equals("kolmas")){
+            kolmas += Float.parseFloat(m[1]);
+          }
+          if(m[0].equals("neljas")){
+            neljas += Float.parseFloat(m[1]);
+          }
+          if(m[0].equals("viies")){
+            viies+= Float.parseFloat(m[1]);
+          }
+      }
+
+      double a = 4;
+      double b = 3;
+      double c;
+      System.out.println(c = funktsioon(a, b));
+
+      summa = teine * kolmas * neljas * viies;
+      System.out.println(summa);
+      System.out.println(arv = Math.pow(summa,  1/4f));
+
+      br.close();
+    }catch(Exception e){e.printStackTrace();}
+    PrintWriter out = new PrintWriter("output.txt");
+    Math.round(teine = esimene * teine);
+    Math.round(kolmas = teine * kolmas);
+    Math.round(neljas = kolmas * neljas);
+    Math.round(viies = neljas * viies);
+
+    Math.round(u_teine = esimene * arv);
+    Math.round(u_kolmas = u_teine * arv);
+    Math.round(u_neljas = u_kolmas * arv);
+    Math.round(u_viies = u_neljas * arv);
+
+
+    String a_1 = Double.toString(esimene);
+    String a_2 = Double.toString(teine);
+    String a_3 = Double.toString(kolmas);
+    String a_4 = Double.toString(neljas);
+    String a_5 = Double.toString(viies);
+
+    String l_1 = Double.toString(esimene);
+    String l_2 = Double.toString(u_teine);
+    String l_3 = Double.toString(u_kolmas);
+    String l_4 = Double.toString(u_neljas);
+    String l_5 = Double.toString(u_viies);
+
+    out.print("1. "+a_1 + "               1.  "+l_1);
+    out.print("\n2. " +a_2+"   2.  "+l_2);
+    out.print("\n3. " +a_3+"   3.  "+l_3);
+    out.print("\n4. "+a_4+"   4.  "+l_4);
+    out.print("\n5. "+a_5+"    5.  "+l_5);
+
+    out.close();
+
+
+
+
+  }
+  public static double funktsioon(double x1 , double x2){
+    double vastus = Math.sqrt(x1 * x2);
+    return vastus;
+  }
+}
