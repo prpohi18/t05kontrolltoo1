@@ -32,33 +32,33 @@ public class t05kontrolltoo1{
 		double abi25 = loendur * 0.25;
 		double abi50 = loendur * 0.50;
 		double abi75 = loendur * 0.75;
-		int a25 = vaartused(arvud, abi25, loendur);
-		int b50 = vaartused(arvud, abi50, loendur);
-		int c75 = vaartused(arvud, abi75, loendur);
+		int a25 = vaartused(arvud, abi25);
+		int b50 = vaartused(arvud, abi50);
+		int c75 = vaartused(arvud, abi75);
 		System.out.println("Väärtus, millest 0.25% on väiksemad = " + a25);
 		System.out.println("Väärtus, millest 0.50% on väiksemad = " + b50);
 		System.out.println("Väärtus, millest 0.75% on väiksemad = " + c75);
 		System.out.println("Suurim = " + suurim);
-		printCircleLength(suurim, a25, c75);
+		printCircleLength(suurim, a25, b50, c75);
         br.close();
     }
-	public static int vaartused(ArrayList<Integer> Arvud, double Abi, int Loendur)throws Exception{
+	public static int vaartused(ArrayList<Integer> Arvud, double Abi)throws Exception{
 		int suurim1 = Arvud.get((int)(Math.ceil(Abi)));
 		int vahim1 = Arvud.get((int)(Math.floor(Abi)));
 		int tulemus = vahim1+(suurim1-vahim1)/2;
 		return tulemus;
 	}
-	public static void printCircleLength(int Suurim1, int A, int C)throws Exception{
-		BufferedImage bi=new BufferedImage(Suurim1*2+50, 400, BufferedImage.TYPE_INT_RGB);
+	public static void printCircleLength(int Suurim1, int A,int B, int C)throws Exception{
+		BufferedImage bi=new BufferedImage(Suurim1+50, 400, BufferedImage.TYPE_INT_RGB);
         Graphics g=bi.createGraphics();
         g.setColor(Color.RED);
-        g.fillRect(0, 0, Suurim1*2+50, 400);
-        g.setColor(Color.BLUE);
-		g.fillRect((Suurim1*2+50)/2, 180, A, 40);
-		g.setColor(Color.GREEN);
-		g.fillRect(((Suurim1*2+50)/2)-C, 180, C, 40);
+        g.fillRect(0, 0, Suurim1+50, 400);
+        g.setColor(Color.GREEN);
+		g.fillRect(25 + A, 180, C-A, 40);
+		g.setColor(Color.BLACK);
+		g.drawLine(25, 200, Suurim1+25, 200);
 		g.setColor(Color.YELLOW);
-		g.drawLine(25, 200, Suurim1*2+25, 200);
+		g.drawLine(B+25, 180, B+25, 220);
         ImageIO.write(bi, "png", new File("pilt1.png")); 
 	}
 }
