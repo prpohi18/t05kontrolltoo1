@@ -1,0 +1,5 @@
+Matemaatika,B,3
+Eesti_keel,B,3
+Inglise_keel,B,4
+Geograafia,A,4
+Muusika,A,6
