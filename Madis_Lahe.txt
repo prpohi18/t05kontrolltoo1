@@ -1,0 +1,3 @@
+Õpilase eesnimi: Madis
+Õpilase perekonnanimi: Lahe
+Kaalutud keskmine hinne: 4.588235294117647

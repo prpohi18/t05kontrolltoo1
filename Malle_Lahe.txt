@@ -1,0 +1,3 @@
+Õpilase eesnimi: Malle
+Õpilase perekonnanimi: Lahe
+Kaalutud keskmine hinne: 2.422222222222222
