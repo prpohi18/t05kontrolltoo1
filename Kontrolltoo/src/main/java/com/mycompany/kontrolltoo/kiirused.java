@@ -24,8 +24,10 @@ public class kiirused {
     }
     public int getX(){return x;}
     public int getY(){return y;}
+    
+    //https://et.wikipedia.org/wiki/Harmooniline_keskmine
     public double keskmineKiirus(kiirused teine){
-        int K = (getX() + teine.getX())/2;
+        double K = (2/(1.0/getX() +1.0/teine.getX()));
         return K;
     }
     ArrayList<Integer> kiirusedList = new ArrayList<>();
@@ -36,12 +38,13 @@ public class kiirused {
         kiirusedList.add(neljas.getX());
         kiirusedList.add(viies.getX());
         kiirusedList.add(kuues.getX());
-        int summa = 0;
-        double keskmine = 0;
+        double summa = 0;
+        
         for(int i=0; i<kiirusedList.size();i++){
-            summa = summa + kiirusedList.get(i);
+            double test = kiirusedList.get(i);
+            summa = summa + 1/test;
         }
-        keskmine = summa / kiirusedList.size();
+        double keskmine = kiirusedList.size() / summa;
         return keskmine;
     }
     public String kiirusedPildile(kiirused teine, kiirused kolmas,kiirused neljas, kiirused viies, kiirused kuues) throws IOException{
@@ -56,19 +59,19 @@ public class kiirused {
         
         //aeg/kaugus
         g.setColor(Color.red);
-        g.drawLine(0,200-getY()*5,50,200-teine.getY()*5);
-        g.drawLine(50,200-teine.getY()*5,100,200-kolmas.getY()*5);
-        g.drawLine(100,200-kolmas.getY()*5,150,200-neljas.getY()*5);
-        g.drawLine(150,200-neljas.getY()*5,200,200-viies.getY()*5);
-        g.drawLine(200,200-viies.getY()*5,250,200-teine.getY()*5);
+        g.drawLine(10,200-getY()*5,60,200-teine.getY()*5);
+        g.drawLine(60,200-teine.getY()*5,110,200-kolmas.getY()*5);
+        g.drawLine(110,200-kolmas.getY()*5,160,200-neljas.getY()*5);
+        g.drawLine(160,200-neljas.getY()*5,210,200-viies.getY()*5);
+        g.drawLine(210,200-viies.getY()*5,260,200-teine.getY()*5);
         
         //kiirus/kaugus
         //g.setColor(Color.blue);
-        //g.drawLine(0,200-getX(),50,200-teine.getX());
-        //g.drawLine(50,200-teine.getX(),100,200-kolmas.getX());
-        //g.drawLine(100,200-kolmas.getX(),150,200-neljas.getX());
-        //g.drawLine(150,200-neljas.getX(),200,200-viies.getX());
-        //g.drawLine(200,200-viies.getX(),250,200-teine.getX());
+        //g.drawLine(10,200-getX(),50,210-teine.getX());
+        //g.drawLine(60,20-teine.getX(),110,200-kolmas.getX());
+        //g.drawLine(110,200-kolmas.getX(),160,200-neljas.getX());
+        //g.drawLine(160,200-neljas.getX(),210,200-viies.getX());
+        //g.drawLine(210,200-viies.getX(),260,200-teine.getX());
         
         g.setColor(Color.white);
         g.drawLine(10,0,10,300);

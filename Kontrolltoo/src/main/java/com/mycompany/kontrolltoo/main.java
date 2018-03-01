@@ -5,12 +5,7 @@
  */
 package com.mycompany.kontrolltoo;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
 
 
 public class main {
@@ -26,7 +21,7 @@ public class main {
         kiirused k6= new kiirused (70,13);
         
         System.out.println("Kahe kilomeetrise lõigu läbimise keskmine kiirus: "+k1.keskmineKiirus(k2)+"km/h");
-        System.out.println("Kuue kilomeetrise lõigu läbimise keskmine kiirus: "+k1.keskminePikem(k2,k3,k4,k5,k6)+"km/h");
+        System.out.println("Kuue kilomeetrise lõigu läbimise keskmine kiirus: "+Math.round(k1.keskminePikem(k2,k3,k4,k5,k6))+"km/h");
         System.out.println(k1.kiirusedPildile(k2,k3,k4,k5,k6));
         
     }
