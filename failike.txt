@@ -1,0 +1,4 @@
+1. libisev keskmine: 3.3333333
+2. libisev keskmine: 4.0
+3. libisev keskmine: 3.0
+4. libisev keskmine: 4.3333335
