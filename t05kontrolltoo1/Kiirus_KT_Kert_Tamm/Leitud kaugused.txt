@@ -1,0 +1,15 @@
+(1. paar) Esimene auto on 3 sekundi pärast 95.14166666666667 km kaugusel ja teine auto on 35.4625 km kaugusel.
+(1. paar) Esimene auto on 300 sekundi pärast 99.26666666666667 km kaugusel ja teine auto on 41.65 km kaugusel.
+(1. paar) Esimene auto on 7200 sekundi pärast 195.1 km kaugusel ja teine auto on 185.4 km kaugusel.
+(2. paar) Esimene auto on 3 sekundi pärast 80.2625 km kaugusel ja teine auto on 20.575 km kaugusel.
+(2. paar) Esimene auto on 300 sekundi pärast 86.45 km kaugusel ja teine auto on 28.0 km kaugusel.
+(2. paar) Esimene auto on 7200 sekundi pärast 230.2 km kaugusel ja teine auto on 200.5 km kaugusel.
+(3. paar) Esimene auto on 3 sekundi pärast 20.041666666666668 km kaugusel ja teine auto on 25.875 km kaugusel.
+(3. paar) Esimene auto on 300 sekundi pärast 24.166666666666664 km kaugusel ja teine auto on 33.3 km kaugusel.
+(3. paar) Esimene auto on 7200 sekundi pärast 120.0 km kaugusel ja teine auto on 205.8 km kaugusel.
+(4. paar) Esimene auto on 3 sekundi pärast 10.3625 km kaugusel ja teine auto on 46.575 km kaugusel.
+(4. paar) Esimene auto on 300 sekundi pärast 16.55 km kaugusel ja teine auto on 54.0 km kaugusel.
+(4. paar) Esimene auto on 7200 sekundi pärast 160.3 km kaugusel ja teine auto on 226.5 km kaugusel.
+(5. paar) Esimene auto on 3 sekundi pärast 5.5625 km kaugusel ja teine auto on 5.575 km kaugusel.
+(5. paar) Esimene auto on 300 sekundi pärast 11.75 km kaugusel ja teine auto on 13.0 km kaugusel.
+(5. paar) Esimene auto on 7200 sekundi pärast 155.5 km kaugusel ja teine auto on 185.5 km kaugusel.
