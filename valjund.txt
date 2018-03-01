@@ -1,0 +1,6 @@
+Autod: 1
+Esimese auto uus kaugus on: 20.0 km ja teise auto uus kaugus on: 120.0 km
+Esimese auto uus kaugus on: 30.0 km ja teise auto uus kaugus on: 80.0 km
+Autod: 2
+Esimese auto uus kaugus on: 160.0 km ja teise auto uus kaugus on: 130.0 km
+Esimese auto uus kaugus on: 210.0 km ja teise auto uus kaugus on: 195.0 km
