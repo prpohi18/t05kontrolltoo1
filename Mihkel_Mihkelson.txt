@@ -1,0 +1,3 @@
+Õpilase eesnimi: Mihkel
+Õpilase perekonnanimi: Mihkelson
+Kaalutud keskmine hinne: 4.0

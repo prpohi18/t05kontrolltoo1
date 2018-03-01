@@ -1,0 +1,15 @@
+Aine1,A,5
+Aine2,B,4
+Aine3,A,2
+Aine4,F,1
+Aine5,A,5
+Aine6,C,3
+Aine7,E,4
+Aine8,D,2
+Aine9,B,3
+Aine10,A,6
+Aine11,B,5
+Aine12,A,4
+Aine13,A,3
+Aine14,A,2
+Aine15,A,1
