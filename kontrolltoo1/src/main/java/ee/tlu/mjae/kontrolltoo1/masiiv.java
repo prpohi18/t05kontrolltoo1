@@ -1,4 +1,7 @@
 package ee.tlu.mjae.kontrolltoo1;
+/*
+karp ja vurrud joonisena
+*/
 
 import java.awt.Color;
 import java.awt.Graphics;
