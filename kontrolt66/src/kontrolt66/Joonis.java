@@ -30,6 +30,7 @@ public class Joonis {
             arvud1+=aasta1;
             arvud2+=aasta2;
             i++;
+            
             rida=br.readLine();
         }
         //esimese aasta keskmine
@@ -42,7 +43,10 @@ public class Joonis {
         g.setColor(Color.orange);
         g.fillRect(100/keskmine2*3,100/keskmine2*3, 5, 5);
         
+        //Graphics: drawLine(int x1, int y1, int x2, int y2)
         g.setColor(Color.black);
+        //g.drawLine(keskmine2, keskmine1,keskmine2, keskmine1);
+        
         
         g.drawLine(10,0,10,300);
         g.drawLine(0,290,400,290);
