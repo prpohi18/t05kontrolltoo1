@@ -54,7 +54,7 @@ public class kiirused {
         g.setColor(Color.black);
         g.fillRect(0, 0, 400, 300);
         g.setColor(Color.white);
-        //g.drawString("sinine = kiirus/kaugus",15,225);
+        g.drawString("sinine = kiirus/kaugus",15,225);
         g.drawString("punane = aeg/kaugus",15,235);
         
         //aeg/kaugus
@@ -66,12 +66,12 @@ public class kiirused {
         g.drawLine(210,200-viies.getY()*5,260,200-teine.getY()*5);
         
         //kiirus/kaugus
-        //g.setColor(Color.blue);
-        //g.drawLine(10,200-getX(),50,210-teine.getX());
-        //g.drawLine(60,20-teine.getX(),110,200-kolmas.getX());
-        //g.drawLine(110,200-kolmas.getX(),160,200-neljas.getX());
-        //g.drawLine(160,200-neljas.getX(),210,200-viies.getX());
-        //g.drawLine(210,200-viies.getX(),260,200-teine.getX());
+        g.setColor(Color.blue);
+        g.drawLine(10,200-getX(),60,200-teine.getX());
+        g.drawLine(60,200-teine.getX(),110,200-kolmas.getX());
+        g.drawLine(110,200-kolmas.getX(),160,200-neljas.getX());
+        g.drawLine(160,200-neljas.getX(),210,200-viies.getX());
+        g.drawLine(210,200-viies.getX(),260,200-teine.getX());
         
         g.setColor(Color.white);
         g.drawLine(10,0,10,300);
