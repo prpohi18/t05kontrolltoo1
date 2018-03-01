@@ -14,23 +14,33 @@ public class Joonis {
         String rida=br.readLine();
         rida=br.readLine();
         
-        int arvud=0;
+        int arvud1=0;
+        int arvud2=0;
         int i=0;
-        int keskmine=0;
-        
+        int keskmine1=0;
+        int keskmine2=0;
         while(rida!=null){
             String[] m=rida.split(",");
+            int aasta1=Integer.parseInt(m[0]);
+            int aasta2=Integer.parseInt(m[1]);
             g.setColor(Color.pink);
-            g.fillRect(100/Integer.parseInt(m[0])*5,100/Integer.parseInt(m[0])*5, 5, 5);
-            arvud+=Integer.parseInt(m[0]);
+            g.fillRect(100/aasta1*5,100/aasta1*5, 5, 5);
+            g.setColor(Color.green);
+            g.fillRect(100/aasta2*5,100/aasta1*5, 5, 5);
+            arvud1+=aasta1;
+            arvud2+=aasta2;
             i++;
             rida=br.readLine();
-            g.setColor(Color.black);
-            g.fillRect(100/Integer.parseInt(m[1])*5,100/Integer.parseInt(m[1])*5, 5, 5);
         }
-        keskmine=arvud/i;
+        //esimese aasta keskmine
+        keskmine1=arvud1/i;
         g.setColor(Color.red);
-        g.fillRect(100/keskmine*3,100/keskmine*3, 5, 5);
+        g.fillRect(100/keskmine1*3,100/keskmine1*3, 5, 5);
+        
+        //teise aasta keskmine
+        keskmine2=arvud2/i;
+        g.setColor(Color.orange);
+        g.fillRect(100/keskmine2*3,100/keskmine2*3, 5, 5);
         
         g.setColor(Color.black);
         

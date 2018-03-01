@@ -11,8 +11,8 @@ public class Kontrolt66 {
         
         //teine osa
         int i=0;
-        int arvudeSumma=1;
-        int arvudeSumma1=1;
+        double arvudeSumma=1;
+        double arvudeSumma1=1;
         double vastus=0;
         double vastus2=0;
         BufferedReader br=new BufferedReader(new FileReader("sisend.txt"));
@@ -21,9 +21,11 @@ public class Kontrolt66 {
             
             String[] m=rida.split(",");
             System.out.println(rida);
+            double aasta1=Integer.parseInt(m[0]);
+            double aasta2=Integer.parseInt(m[1]);
             i++;
-            arvudeSumma1*=Integer.parseInt(m[1]);//teine aasta
-            arvudeSumma*=Integer.parseInt(m[0]);//esimene aasta
+            arvudeSumma=arvudeSumma*aasta1;//esimene aasta
+            arvudeSumma1=arvudeSumma1*aasta2;//teine aasta
             
             rida=br.readLine();            
         }
