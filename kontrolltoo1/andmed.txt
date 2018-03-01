@@ -1,0 +1,6 @@
+kursus,ainepunktid,hinne
+Matemaatika,5,A
+Eesti_keel,2,A
+Inglise_keel,6,B
+Algoritmid_ja_andmestruktuurid,4,A
+Programmeerimise_pohikursus,3,A
