@@ -74,17 +74,16 @@ public class KroonoloogilineKeskmine {
                 ridaCount++;
                 
             }
-            
+            System.out.println(andmed);
             br.close();
             File fout = new File(filePath + "_avgtemp"  + ".txt");
             FileOutputStream fos = new FileOutputStream(fout);
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
-            Andmed andmed0 = new Andmed();
             
-            for (int i = 0; i < ridaCount; i++) {
-                
-                double[] andmed1 = {andmed0.getTemp0(), andmed0.getTemp12(), andmed0.getTemp18(), andmed0.getTemp24()};
-                double[] andmedFaili = {andmed0.getKuupaev(), KronKesk2(andmed1)};
+            for (int i = 0; i < andmed.size(); i++) {
+                Andmed currentAndmed  = andmed.get(i);
+                double[] andmed1 = {currentAndmed.getTemp0(), currentAndmed.getTemp6(), currentAndmed.getTemp12(), currentAndmed.getTemp18(), currentAndmed.getTemp24()};
+                double[] andmedFaili = {currentAndmed.getKuupaev(), KronKesk2(andmed1)};
                 bw.write(Arrays.toString(andmedFaili) + "\n");
             }
             bw.close();
