@@ -1,0 +1,8 @@
+Kuupäev: 01.01.2017
+Keskmine temperatuur: 10.5
+Kuupäev: 01.02.2017
+Keskmine temperatuur: 11.3
+Kuupäev: 01.03.2017
+Keskmine temperatuur: 8.3
+Kuupäev: 01.04.2017
+Keskmine temperatuur: 11.9
