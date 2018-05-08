@@ -2,4 +2,4 @@ auto,kaugus,kiirus
 Sinine_auto,45,130
 Roheline_auto,560,20
 Helesinine_auto,43,220
-Lilla_auto,43,220
+Lilla_auto,76,115
