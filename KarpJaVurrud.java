@@ -6,9 +6,12 @@ public class KarpJaVurrud{
         BufferedReader br = new BufferedReader(new FileReader("andmed.txt"));
         List<Integer> andmed = new ArrayList<Integer>();
         String rida=br.readLine();
- /*           while(rida != null) {
+ /*           
+ 
+                while(rida != null) {
                 andmed.add(rida);
                 rida=br.readLine();
+
  }*/
 
         while(rida!=null){
