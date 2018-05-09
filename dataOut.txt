@@ -1,0 +1,12 @@
+Algpalk on: 1200.0
+
+Uus palk: 1320.0  ||  koefitsent: 1.1  ||  palk, kui koef yhtlane: 1320.0
+
+Uus palk: 1440.0  ||  koefitsent: 1.2  ||  palk, kui koef yhtlane: 1584.0
+
+Uus palk: 1560.0  ||  koefitsent: 1.3  ||  palk, kui koef yhtlane: 2059.2000000000003
+
+Uus palk: 1680.0  ||  koefitsent: 1.4  ||  palk, kui koef yhtlane: 2882.88
+
+Uus palk: 1800.0  ||  koefitsent: 1.5  ||  palk, kui koef yhtlane: 4324.32
+
