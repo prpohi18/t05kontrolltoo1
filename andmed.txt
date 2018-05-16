@@ -1,0 +1,3 @@
+Hiina_ajalugu,D,6
+Jaapani_keel,A,4
+Kõrgem_matemaatika,B,4

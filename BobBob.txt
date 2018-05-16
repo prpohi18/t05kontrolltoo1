@@ -1,0 +1,3 @@
+Õpilase eesnimi: Bob
+Õpilase perekonnanimi: Bob
+Kaalutud keskmine hinne: 4.5
