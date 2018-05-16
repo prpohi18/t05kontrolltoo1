@@ -19,7 +19,6 @@ public class KT1{
 		
                 //arvutan kokku EAPde kogusumma
                 for(int i=0; i<aineteMassiiv.length; i++){
-                    System.out.println("SSSSS    "+kaalutudKeskmiseEAPsumma);
                     // ainepunktidesumma + (EAP x HINNE)
 			kaalutudKeskmiseEAPsumma = kaalutudKeskmiseEAPsumma + aineteMassiiv[i] * hinneteMassiiv[i];
 		}
@@ -27,7 +26,6 @@ public class KT1{
 		double eapSumma = 0;
 		                
                 for(int i: aineteMassiiv){
-                    System.out.println("EAPSUMMA   "+eapSumma);
 			eapSumma += i;
 		}
 		
@@ -37,7 +35,57 @@ public class KT1{
 	}
         
         //  3)  Funktsioon andmete lugemiseks ja kirjutamiseks
-        
+
+	//Failist loetud hinnete jaoks.
+	public static double kaalutudKeskmineFailist(String aineNimi, int hindenr, int ainenr) throws IOException{
+		System.out.println("KOLMAS PUNKT");
+                BufferedReader reader = new BufferedReader(new FileReader(aineNimi));
+		String rida = reader.readLine();
+		rida = reader.readLine();
+		int hinne;
+		double korrutiste_summa = 0;
+		double ainepunktide_summa = 0;
+		double kaalutudKeskmineFaili;
+		List<Integer> hinded = new ArrayList<Integer>();
+		List<Integer> punktid = new ArrayList<Integer>();
+		while(rida!=null){
+			String[] m = rida.split(", ");
+			String hindekontroll = m[hindenr];
+			rida = reader.readLine();
+			try{
+				punktid.add(Integer.parseInt(m[ainenr]));
+				if(hindekontroll.equals ("A")){
+					hinne = 5;
+					hinded.add(hinne);
+				} else if(hindekontroll.equals ("B")){
+					hinne = 4;
+					hinded.add(hinne);
+				} else if(hindekontroll.equals ("C")){
+					hinne = 3;
+					hinded.add(hinne);
+				} else if(hindekontroll.equals ("D")){
+					hinne = 2;
+					hinded.add(hinne);
+				} else if(hindekontroll.equals ("E")){
+					hinne = 1;
+					hinded.add(hinne);
+				} else if(hindekontroll.equals ("F")){
+					hinne = 0;
+					hinded.add(hinne);
+				}
+			} catch (Exception ex){
+				System.out.println("Andmetes on viga");
+			}
+		}
+		for(int i=0; i<hinded.size(); i++){
+			korrutiste_summa += hinded.get(i) * punktid.get(i);
+			ainepunktide_summa += punktid.get(i);
+		}
+		kaalutudKeskmineFaili = korrutiste_summa/ainepunktide_summa;
+		reader.close();
+		return kaalutudKeskmineFaili;
+	}
+ 
         
         
 	public static void main(String[] args) throws IOException{
@@ -73,6 +121,14 @@ public class KT1{
                 //trykin hinded valja		
 		System.out.println("Sisestatud ainete kaalutud keskmine on " + kaalutudKeskmineKogumina(eapKogumikus, hindedKogumikus) + "\n");
 		
+               //KOLMANDA PUNKTI TULEMUS
+
+		BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(
+		new FileOutputStream("keskmineHinneTulemus.txt"), "utf-8"));
+		writer.write("Kaalutud keskmine on: " + kaalutudKeskmineFailist("Ained.txt", 1, 2));
+		writer.close();
+		System.out.println("Tulemus on kirjutatud faili keskmineHinneTulemus.txt");
+
 	}
 }
 
