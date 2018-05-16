@@ -1,0 +1,3 @@
+Õpilase eesnimi: Kai
+Õpilase perekonnanimi: Mai
+Kaalutud keskmine hinne: 4.4
