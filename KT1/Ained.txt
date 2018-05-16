@@ -1,0 +1,10 @@
+AINE, HINNE, EAP
+Uurimisseminar, A, 3
+AgiilneTarkvaraarendus, A, 3
+Andmeanalyys, D, 4
+AsjadeInternet, A, 3
+TeoreetilineInformaatika, E, 5
+Infoturve, A, 4
+ProgrammeerimisePohikursus, D, 4
+Veebiprogrammeerimine, A, 4
+3Dmodelleerimine, D, 4
