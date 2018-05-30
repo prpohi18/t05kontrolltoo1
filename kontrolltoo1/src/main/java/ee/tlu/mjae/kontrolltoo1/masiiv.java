@@ -14,7 +14,7 @@ import javax.imageio.ImageIO;
 
 public class masiiv {
     public static void main(String[] arg) throws IOException{
-    int[] a = {81, 23, 45, 12, 34, 98, 72, 123, -7, 0};
+    int[] a = {25, 14, -7, 15, 36, 56, 0, 18, 29, 49};
     int min = Arrays.stream(a).min().getAsInt();
     int max = Arrays.stream(a).max().getAsInt();
     System.out.println("Massiiv järjestatud kasvavas järjekorras: ");
@@ -42,16 +42,24 @@ public class masiiv {
          g.setColor(Color.WHITE);
          g.fillRect(0, 0, 400, 300);
          g.setColor(Color.BLACK);
-         g.drawLine(100+min*2, 270-min*2, 100+max*2, 270-max*2);
-         g.drawString("Min", 70+min*2, 240-min*2);
-         g.drawString("Max", 70+max*2, 260-max*2);
+         g.drawLine(100+min*4, 170-min*3, 100+max*4, 170-max*3);
+	 g.drawString("min",70+min*4, 150-min*3);
+	 g.drawString("max",120+max*4, 20);
+         
+         g.setColor(Color.GREEN);
+        g.drawLine(100+pool*3, 300, 100+pool*3, 100+pool/4);
+		g.drawString("50%",150, 100+pool*3);
+         g.setColor(Color.RED);
+         g.drawRect(100+veerand*4, 170-kolmveerand*3, 90, 70);
+         g.drawString("25% - 75%",90, 70);
+         
+         
          int len = a.length;
          for(int i = 0; i < len; i++){
              g.setColor(Color.BLUE);
-             g.fillRect(100+a[i]*2,267-a[i]*2 ,5, 5);
+             g.fillRect(100+a[i]*4,170-a[i]*3 ,5, 5);
          }
          
          ImageIO.write(bi, "png", new File("joonis.png"));
 }
 }
-
